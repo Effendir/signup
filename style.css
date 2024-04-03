@@ -1,4 +1,4 @@
-/* Main tags */
+/* Main styling */
 
 @font-face {
   font-family: "catfiles";
@@ -31,6 +31,27 @@ body {
   display: flex;
 }
 
+.italic {
+  font-style: italic;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+/* Banner */
+
+.banner {
+  background-image: url(images/banner.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 h1 {
   margin: 0;
   width: 100%;
@@ -48,11 +69,25 @@ h1 img {
   height: 50%;
 }
 
+/* Header */
+
 h2 {
   text-align: center;
   font-family: "catcomic", sans-serif;
   font-weight: 100;
   padding: 5%;
+}
+
+/* Form */
+
+form {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5%;
+  margin: 5%;
+}
+
+fieldset {
+  width: 100%;
 }
 
 form, fieldset {
@@ -62,25 +97,52 @@ form, fieldset {
   border: none;
 }
 
+fieldset p {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
 legend {
   font-family: "catboo";
+  padding-left: 15%;
 }
 
 label, p, .sign-in, button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-p i {
-  font-size: xx-small;
-}
-
-form {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 5%;
-}
-
 input {
   border: rgb(184, 184, 184);
+  border-radius: 3px;
+}
+
+input:active {
+  border: 2px solid var(--active);
+}
+
+input::placeholder {
+  color: #424242;
+}
+
+.valid {
+  color: var(--valid);
+  display: none;
+}
+
+.invalid {
+  color: var(--orange);
+  display: none;
+}
+
+.info {
+  font-size: smaller;
+  display: inline;
+}
+
+p i {
+  font-size: xx-small;
+  color: var(--brown);
 }
 
 button {
@@ -91,6 +153,14 @@ button {
   font-weight: bold;
   font-size: large;
 }
+
+/* Sign in */
+
+.sign-in {
+  text-align: center;
+}
+
+/* Footer */
 
 footer {
   height: 3%;
@@ -106,57 +176,6 @@ footer {
 footer p {
   font-weight: bold;
 }
-
-/* Classes */
-
-.italic {
-  font-style: italic;
-}
-
-.banner {
-  background-image: url(images/banner.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.info {
-  font-size: smaller;
-}
-
-.sign-in {
-  text-align: center;
-}
-
-.valid {
-  color: var(--valid);
-  content: ✔;
-}
-
-.invalid {
-  color: var(--orange);
-  content: ✗;
-}
-
-/* Pseudoclasses */
-
-a:link {
-  text-decoration: none;
-}
-
-input:active {
-  border: 2px solid var(--active);
-}
-
-input::placeholder {
-  color: #424242;
-}
-
-/* IDs */
 
 /* Desktop media query */
 
