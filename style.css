@@ -1,5 +1,20 @@
 /* Main tags */
 
+@font-face {
+  font-family: "catfiles";
+  src: url(fonts/catfiles.ttf);
+}
+
+@font-face {
+  font-family: "catboo";
+  src: url(fonts/catboo.ttf);
+}
+
+@font-face {
+  font-family: "catcomic";
+  src: url(fonts/catcomic.ttf);
+}
+
 :root {
   --beige: #D0C8C0;
   --pink: #C29378;
@@ -11,10 +26,30 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--beige);
+  display: flex;
 }
 
 h1 {
+  margin: 0;
+  width: 100%;
+  height: 15%;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
   color: var(--orange);
+  font-family: "catfiles", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 img {
+  height: 50%;
+}
+
+h2 {
+  text-align: center;
+  font-family: "catcomic", sans-serif;
+  font-weight: 100;
 }
 
 form, fieldset {
@@ -23,17 +58,47 @@ form, fieldset {
   align-items: center;
 }
 
+input {
+  border: rgb(184, 184, 184);
+}
+
+footer {
+  text-align: center;
+}
+
 /* Classes */
+
+.italic {
+  font-style: italic;
+}
 
 .banner {
   background-image: url(images/banner.jpg);
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.sign-in {
+  text-align: center;
+}
+
+/* Pseudoclasses */
+
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  border: 2px solid var(--orange);
+}
+
+input::placeholder {
+  color: #424242;
 }
 
 /* IDs */
