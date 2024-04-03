@@ -1,0 +1,45 @@
+/* Main tags */
+
+:root {
+  --beige: #D0C8C0;
+  --pink: #C29378;
+  --orange: #EEA53A;
+  --brown: #6D5F48;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--beige);
+}
+
+h1 {
+  color: var(--orange);
+}
+
+form, fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Classes */
+
+.banner {
+  background-image: url(images/banner.jpg);
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* IDs */
+
+/* Desktop media query */
+
+@media only screen and (min-width: 768px) {
+
+}
