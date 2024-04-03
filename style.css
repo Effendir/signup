@@ -44,6 +44,16 @@ body {
 
 a:link {
   text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: var(--orange);
 }
 
 /* Banner */
@@ -108,6 +118,7 @@ fieldset p {
   width: 50%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 legend {
@@ -135,11 +146,17 @@ input::placeholder {
 
 .valid {
   color: var(--valid);
+  position: absolute;
+  padding-left: 90%;
+  padding-top: 10%;
   display: none;
 }
 
 .invalid {
   color: var(--orange);
+  position: absolute;
+  padding-left: 90%;
+  padding-top: 10%;
   display: none;
 }
 
@@ -173,18 +190,33 @@ button {
 
 footer {
   height: 3%;
-  text-align: center;
   bottom: 0;
   margin: 0;
   margin-top: auto;
   background-color: var(--pink-transparent);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-footer p {
-  font-weight: bold;
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-links a:hover {
+  color: var(--orange);
+}
+
+.fa-heart {
+  color: var(--pink);
+}
+
+.fa-mug-hot {
+  color: var(--brown);
 }
 
 /* Desktop media query */
