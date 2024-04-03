@@ -17,6 +17,7 @@
 
 :root {
   --beige: #D0C8C0;
+  --darker-beige: #aca49e;
   --pink: #C29378;
   --pink-transparent: rgba(194, 147, 120, 0.5);
   --orange: #EEA53A;
@@ -99,6 +100,7 @@ h2 {
 
 form {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--darker-beige);
   padding: 5%;
   margin: 5%;
 }
@@ -147,17 +149,15 @@ input::placeholder {
 .valid {
   color: var(--valid);
   position: absolute;
-  padding-left: 90%;
-  padding-top: 10%;
-  display: none;
+  right: 5px;
+  top: 20px;
 }
 
 .invalid {
   color: var(--orange);
   position: absolute;
-  padding-left: 90%;
-  padding-top: 10%;
-  display: none;
+  right: 5px;
+  top: 20px;
 }
 
 .info {
@@ -168,6 +168,12 @@ input::placeholder {
 p i {
   font-size: xx-small;
   color: var(--brown);
+}
+
+.password-info {
+  color: white;
+  font-size: smaller;
+  text-align: center;
 }
 
 button {
