@@ -18,6 +18,7 @@
 :root {
   --beige: #D0C8C0;
   --pink: #C29378;
+  --pink-transparent: rgba(194, 147, 120, 0.5);
   --orange: #EEA53A;
   --brown: #6D5F48;
   --active: #4762D4;
@@ -29,6 +30,12 @@ body {
   padding: 0;
   background-color: var(--beige);
   display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .italic {
@@ -115,6 +122,7 @@ label, p, .sign-in, button {
 input {
   border: rgb(184, 184, 184);
   border-radius: 3px;
+  height: 25px;
 }
 
 input:active {
@@ -149,6 +157,7 @@ button {
   border: 2px solid var(--orange);
   border-radius: 5px;
   background-color: var(--pink);
+  padding: 1%;
   color: white;
   font-weight: bold;
   font-size: large;
@@ -167,7 +176,8 @@ footer {
   text-align: center;
   bottom: 0;
   margin: 0;
-  background-color: var(--pink);
+  margin-top: auto;
+  background-color: var(--pink-transparent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,5 +190,32 @@ footer p {
 /* Desktop media query */
 
 @media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
 
+  .banner {
+    width: 100%;
+  }
+
+  fieldset {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  fieldset p {
+    width: 40%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  footer {
+    height: 5%;
+  }
 }
