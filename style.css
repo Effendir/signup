@@ -20,6 +20,8 @@
   --pink: #C29378;
   --orange: #EEA53A;
   --brown: #6D5F48;
+  --active: #4762D4;
+  --valid: #6E885C;
 }
 
 body {
@@ -50,20 +52,59 @@ h2 {
   text-align: center;
   font-family: "catcomic", sans-serif;
   font-weight: 100;
+  padding: 5%;
 }
 
 form, fieldset {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
+}
+
+legend {
+  font-family: "catboo";
+}
+
+label, p, .sign-in, button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p i {
+  font-size: xx-small;
+}
+
+form {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 5%;
 }
 
 input {
   border: rgb(184, 184, 184);
 }
 
+button {
+  border: 2px solid var(--orange);
+  border-radius: 5px;
+  background-color: var(--pink);
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
 footer {
+  height: 3%;
   text-align: center;
+  bottom: 0;
+  margin: 0;
+  background-color: var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  font-weight: bold;
 }
 
 /* Classes */
@@ -83,18 +124,32 @@ footer {
   justify-content: center;
 }
 
+.info {
+  font-size: smaller;
+}
+
 .sign-in {
   text-align: center;
 }
 
-/* Pseudoclasses */
-
-input:valid {
-  border: 2px solid green;
+.valid {
+  color: var(--valid);
+  content: ✔;
 }
 
-input:invalid {
-  border: 2px solid var(--orange);
+.invalid {
+  color: var(--orange);
+  content: ✗;
+}
+
+/* Pseudoclasses */
+
+a:link {
+  text-decoration: none;
+}
+
+input:active {
+  border: 2px solid var(--active);
 }
 
 input::placeholder {
