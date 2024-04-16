@@ -147,7 +147,7 @@ input:active {
 }
 
 input::placeholder {
-  color: #424242;
+  color: #ababab;
 }
 
 .valid {
@@ -188,6 +188,10 @@ button {
   color: white;
   font-weight: bold;
   font-size: large;
+}
+
+button:hover {
+  background-color: var(--orange);
 }
 
 /* Sign in */
